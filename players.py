@@ -66,7 +66,6 @@ class BlueShip():
         for bullet in self.bullets:
             bullet.x += BULLET_VEL
             if red_player.colliderect(bullet):
-                print("red hit")
                 pygame.event.post(pygame.event.Event(RED_HIT))
                 self.bullets.remove(bullet)
             elif bullet.x > WIDTH:
@@ -105,9 +104,7 @@ class RedShip():
     def handleBullets(self, blue_player):
         for bullet in self.bullets:
             bullet.x -= BULLET_VEL
-            print(bullet)
             if blue_player.colliderect(bullet):
-                print("blue hit")
                 pygame.event.post(pygame.event.Event(BLUE_HIT))
                 self.bullets.remove(bullet)
             elif bullet.x < 0:

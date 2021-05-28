@@ -97,7 +97,6 @@ def start_the_game():
 
         blue_player.blue_movement(keys_pressed)
         red_player.red_movement(keys_pressed)
-        print(red_player.player.x, red_player.player.y)
         blue_player.handle_bullets(red_player.player)
         red_player.handleBullets(blue_player.player)
 
